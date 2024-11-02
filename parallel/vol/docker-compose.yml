@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  ng1:
+    image: nginx
+    volumes: 
+        - ./vol:/usr/share/nginx/html
+    ports:
+      - 9080:80
+    container_name: ng1
+
+  ng2:
+    image: nginx
+    volumes: 
+      - ./vol:/usr/share/nginx/html
+    ports:
+      - 8080:80
+    container_name: ng2

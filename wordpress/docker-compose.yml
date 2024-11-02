@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  mysql:
+    image: mysql:latest
+    volumes: 
+        - mysql_data:/varlib/mysql
+    ports:
+      - 9080:80
+    environment:
+      - MYSQL_ROOT_PASSWORD: shamsbin
+      - MYSQL_DATABASE: wordpress
+      - MYSQL_USER: wordpress
+      - MYSQL_PASSWORD: wordpress
+    
+    
